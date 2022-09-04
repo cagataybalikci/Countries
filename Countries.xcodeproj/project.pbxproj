@@ -17,6 +17,8 @@
 		5104FE6C28C32CF80093A077 /* SavedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104FE6B28C32CF80093A077 /* SavedViewController.swift */; };
 		5104FE6E28C32D010093A077 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104FE6D28C32D010093A077 /* DetailViewController.swift */; };
 		5104FE7028C32D440093A077 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104FE6F28C32D440093A077 /* HomeViewController.swift */; };
+		5104FE7928C342F40093A077 /* CountryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5104FE7828C342F40093A077 /* CountryDetail.swift */; };
+		515512AF28C4DD6F009086A5 /* StarCheckBoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515512AE28C4DD6F009086A5 /* StarCheckBoxButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		5104FE6B28C32CF80093A077 /* SavedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedViewController.swift; sourceTree = "<group>"; };
 		5104FE6D28C32D010093A077 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5104FE6F28C32D440093A077 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5104FE7628C333920093A077 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		5104FE7828C342F40093A077 /* CountryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetail.swift; sourceTree = "<group>"; };
+		515512AE28C4DD6F009086A5 /* StarCheckBoxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCheckBoxButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5104FE6628C32A550093A077 /* CountryTableViewCell.swift */,
+				515512AE28C4DD6F009086A5 /* StarCheckBoxButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -108,6 +114,8 @@
 		5104FE7328C333090093A077 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5104FE7628C333920093A077 /* Country.swift */,
+				5104FE7828C342F40093A077 /* CountryDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,10 +206,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				515512AF28C4DD6F009086A5 /* StarCheckBoxButton.swift in Sources */,
 				5104FE5128C210980093A077 /* AppDelegate.swift in Sources */,
 				5104FE6C28C32CF80093A077 /* SavedViewController.swift in Sources */,
 				5104FE7028C32D440093A077 /* HomeViewController.swift in Sources */,
 				5104FE6528C32A210093A077 /* WebServices.swift in Sources */,
+				5104FE7928C342F40093A077 /* CountryDetail.swift in Sources */,
+				5104FE7728C333920093A077 /* Country.swift in Sources */,
 				5104FE5328C210980093A077 /* SceneDelegate.swift in Sources */,
 				5104FE6728C32A550093A077 /* CountryTableViewCell.swift in Sources */,
 				5104FE6E28C32D010093A077 /* DetailViewController.swift in Sources */,

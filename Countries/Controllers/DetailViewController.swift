@@ -9,21 +9,31 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    var countryCode = ""
+    
+    @IBOutlet weak var countryFlagImageView: UIImageView!
+    @IBOutlet weak var countryCodeLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        getCountryDetailData(countryCode: countryCode)
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func getCountryDetailData(countryCode:String){
+        WebServices().getCountryDetail(countryCode: countryCode) { result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let detail):
+                DispatchQueue.main.async() {
+                    self.navigationItem.title = detail.name?.capitalized
+                    self.countryCodeLabel.text = detail.code
+                }
+            }
+        }
     }
-    */
 
 }

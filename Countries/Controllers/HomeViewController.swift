@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var countryTableView: UITableView!
     var countryList = [Country]()
-    var countryCode : String?
+    var countryCode = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,18 +40,6 @@ class HomeViewController: UIViewController {
             }
         }
     
-    func getCountryDetailData(countryCode:String){
-        WebServices().getCountryDetail(countryCode: countryCode) { result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let detail):
-                DispatchQueue.main.async() {
-                    print(detail)
-                }
-            }
-        }
-        }
     
     
     
@@ -59,8 +47,15 @@ class HomeViewController: UIViewController {
         // Tabbar
         tabBarController?.tabBar.tintColor = .white
         tabBarController?.tabBar.unselectedItemTintColor = .black
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let destinationVC = segue.destination as! DetailViewController
+                destinationVC.countryCode = countryCode
+        }
+    }
+    
    
 
 }
@@ -79,7 +74,9 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        getCountryDetailData(countryCode: countryList[indexPath.row].code)
+        countryCode = countryList[indexPath.row].code
+        countryTableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "toDetail", sender: self)
     }
     
     

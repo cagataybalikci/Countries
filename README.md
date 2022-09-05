@@ -3,7 +3,6 @@
 
 ## App Preview
 <div>
-<img src="https://github.com/cagataybalikci/Countries-old/blob/main/Preview/pic2.png" width="300" height="640">
 <img src="https://github.com/cagataybalikci/Countries-old/blob/main/Preview/pic1.png" width="300" height="640">
 <img src="https://github.com/cagataybalikci/Countries-old/blob/main/Preview/pic3.png" width="300" height="640">
 <img src="https://github.com/cagataybalikci/Countries-old/blob/main/Preview/pic4.png" width="300" height="640">

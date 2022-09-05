@@ -7,10 +7,13 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class StarCheckBoxButton : UIButton {
     let checkImage = UIImage(named: "star")! as UIImage
     let uncheckImage = UIImage(named: "star")! as UIImage
+    
+    
     
     var isChecked : Bool = false {
         didSet{
@@ -32,11 +35,17 @@ class StarCheckBoxButton : UIButton {
         if sender == self {
             if isChecked {
                 isChecked = false
+                
                 self.tintColor = .lightGray
             }else{
                 isChecked = true
+                
+
                 self.tintColor = .black
             }
         }
     }
+    
+    
+    
 }

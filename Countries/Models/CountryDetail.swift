@@ -15,7 +15,7 @@ struct Response : Codable {
 struct CountryDetail : Codable {
     var capital : String?
     var code : String?
-    var flagImageUri : String?
+    var flagImageUri : String
     var name : String?
-    var wikiDataId : String?
+    var wikiDataId : String
 }

@@ -1,18 +1,22 @@
 PODS:
-  - SDWebImage (5.11.1):
-    - SDWebImage/Core (= 5.11.1)
-  - SDWebImage/Core (5.11.1)
+  - CocoaLumberjack (3.7.4):
+    - CocoaLumberjack/Core (= 3.7.4)
+  - CocoaLumberjack/Core (3.7.4)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
 
 DEPENDENCIES:
-  - SDWebImage (~> 5.0)
+  - SVGKit
 
 SPEC REPOS:
   trunk:
-    - SDWebImage
+    - CocoaLumberjack
+    - SVGKit
 
 SPEC CHECKSUMS:
-  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  CocoaLumberjack: 543c79c114dadc3b1aba95641d8738b06b05b646
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
 
-PODFILE CHECKSUM: fdfdf9ef7c7cdc86b1236f4a6848a1eaa1344755
+PODFILE CHECKSUM: acf3cd5d1e4a7885109fddce14da62a033f5b78a
 
 COCOAPODS: 1.10.2

@@ -6,14 +6,20 @@
 //
 
 import UIKit
+import CoreData
 
 class SavedViewController: UIViewController {
+    
+    var savedCountries = [NSManagedObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    
+
     
 
     /*

@@ -6,6 +6,6 @@ target 'Countries' do
   use_frameworks!
 
   # Pods for Countries
-  pod 'SDWebImage', '~> 5.0'
+  pod 'SVGKit'
 
 end

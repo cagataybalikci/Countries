@@ -14,38 +14,21 @@ class StarCheckBoxButton : UIButton {
     let uncheckImage = UIImage(named: "star")! as UIImage
     
     
-    
     var isChecked : Bool = false {
         didSet{
-            if isChecked  == true {
+            if isChecked  == false {
                 self.setImage(uncheckImage , for: .normal)
+                self.tintColor = .lightGray
             }else{
                 self.setImage(checkImage, for: .normal)
+                self.tintColor = .black
             }
         }
     }
     
     override  func awakeFromNib() {
         self.isUserInteractionEnabled = true
-        self.addTarget(self, action: #selector(StarCheckBoxButton.ButtonClicked(sender:)), for: UIControl.Event.touchUpInside)
-        self.isChecked = false
     }
      
-    @objc func ButtonClicked(sender: UIButton){
-        if sender == self {
-            if isChecked {
-                isChecked = false
-                
-                self.tintColor = .lightGray
-            }else{
-                isChecked = true
-                
-
-                self.tintColor = .black
-            }
-        }
-    }
-    
-    
     
 }

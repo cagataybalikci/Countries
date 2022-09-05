@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var saveButton: StarCheckBoxButton!
     @IBOutlet weak var countryTableView: UITableView!
-    var countries = [NSManagedObject]()
     var countryList = [Country]()
     var countryCode = ""
     override func viewDidLoad() {
@@ -23,7 +22,6 @@ class HomeViewController: UIViewController {
         countryTableView.dataSource = self
         
         setupUI()
-        
         
         getData()
     }
@@ -44,8 +42,6 @@ class HomeViewController: UIViewController {
         }
     
     
-    
-    
     func setupUI(){
         // Tabbar
         tabBarController?.tabBar.tintColor = .white
@@ -60,25 +56,7 @@ class HomeViewController: UIViewController {
     }
     
     
-    func saveCountry(name:String,code:String, isSaved: Bool, countries: [NSManagedObject]){
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context : NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let SavedCountry = NSEntityDescription.entity(forEntityName: "SavedCountry", in: context)
-        let savedItem = NSManagedObject(entity: SavedCountry!, insertInto: context)
-        
-        savedItem.setValue(name, forKeyPath: "name")
-        savedItem.setValue(code, forKeyPath: "code")
-        savedItem.setValue(isSaved, forKey: "isSaved")
-
-          // 4
-          do {
-            try context.save()
-              self.countries.append(savedItem)
-          } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-          }
-        
-    }
+    
     
     
 
@@ -94,8 +72,6 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as! CountryTableViewCell
         cell.countryNameLabel.text = countryList[indexPath.row].name
-        
-        
         return cell
     }
     
@@ -104,6 +80,8 @@ extension HomeViewController : UITableViewDelegate,UITableViewDataSource {
         countryTableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "toDetail", sender: self)
     }
+    
+    
     
     
 }

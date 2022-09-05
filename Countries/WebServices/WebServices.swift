@@ -11,9 +11,6 @@ import Foundation
 
 let urlForNow = "https://wft-geo-db.p.rapidapi.com/v1/geo/countries?limit=10&rapidapi-key=ecbbd1da42mshf82b196f1fc1d61p1d5bb1jsn800e0c14ca4d"
 
-
-
-
 enum CountryError : Error {
     case noDataAvailable
     case cannotProcessData

@@ -12,11 +12,13 @@ class CountryTableViewCell: UITableViewCell {
     @IBOutlet weak var saveButton: StarCheckBoxButton!
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryViewBG: UIView!
-    var isSaved = false
+    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         setupUI()
+        saveButton.addTarget(self, action: #selector(saveItem), for: UIControl.Event.touchUpInside)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +31,17 @@ class CountryTableViewCell: UITableViewCell {
         countryViewBG.layer.borderWidth = 2
         countryViewBG.layer.cornerRadius = 10
     }
+    
+    @objc func saveItem(sender: StarCheckBoxButton){
+        
+        if sender.isChecked {
+                sender.isChecked = false
+            }else{
+                sender.isChecked = true
+            }
+        
+    }
+    
     
     
 

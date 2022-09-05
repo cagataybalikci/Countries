@@ -2,10 +2,11 @@
 //  Country.swift
 //  Countries
 //
-//  Created by Çağatay Balıkçı on 3.09.2022.
+//  Created by Çağatay Balıkçı on 5.09.2022.
 //
 
 import Foundation
+
 
 
 struct Data : Codable {
@@ -16,3 +17,6 @@ struct Country : Codable {
     var code : String
     var name : String
 }
+
+
+
